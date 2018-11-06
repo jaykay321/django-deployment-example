@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% load 'templatetags/my_extra.py' %}
+
+{% extends "basic_app/base.html" %}
+  {% block body_block %}
+    <h1>Welcome to INDEX PAGE</h1>
+    <a href="{% url 'basic_app:other' %}">Other Site</a>
+    <a href="{% url 'basic_app:relative' %}">Relative</a>
+    <a href="{% url 'admin:index' %}">Admin</a>
+    <a href="{% url 'index' %}">Index</a>
+    <h2>{{text | cut:"hello"}}</h2>
+    <h2>{{number | add:'23'}}</h2>
+  {% endblock %}
